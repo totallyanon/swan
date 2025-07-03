@@ -1,8 +1,19 @@
 #ifndef __SWANTYPES_H
 #define __SWANTYPES_H
 
-#include <stdint.h>
+#ifdef __cplusplus
+
+#include <cstdbool>
+#include <cstddef>
+#include <cstdint>
+
+#else
+
+#include <stdbool.h>
 #include <stddef.h>
+#include <stdint.h>
+
+#endif
 
 #define NELEMS(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
 
