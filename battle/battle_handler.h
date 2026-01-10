@@ -57,6 +57,8 @@ STRUCT_DECLARE(HandlerParam_DelayMoveDamage)
 STRUCT_DECLARE(HandlerParam_QuitBattle)
 STRUCT_DECLARE(HandlerParam_BatonPass)
 
+ENUM_DECLARE(BattleHandlerEffect)
+
 #include "battle/battle_conditiondata.h"
 #include "battle/battle_serverflow.h"
 
@@ -76,6 +78,9 @@ int BattleHandler_SetString(ServerFlow *a1, HandlerParam_StringSetup *a2);
 C_DECL_END
 
 enum BattleHandlerEffect
+#ifdef __cplusplus
+: u32
+#endif
 {
   EFFECT_USE_HELD_ITEM = 0x0,
   EFFECT_USE_HELD_ITEM_ANIMATION = 0x1,
@@ -136,7 +141,7 @@ enum BattleHandlerEffect
   EFFECT_CHANGE_FORM = 0x39,
   EFFECT_SET_ANIM_ID = 0x3A,
   EFFECT_PLAY_ANIM = 0x3B,
-} SWAN_PACKED;
+};
 
 struct HandlerParam_Header
 {

@@ -83,7 +83,7 @@ int Handler_GetAllyClientID(ServerFlow *a1, char a2);
 int Handler_IsMonSwitchOutInterrupted(ServerFlow *a1);
 void Handler_AddSwitchOutInterrupt(ServerFlow *a1, char a2);
 bool Handler_IsHiding(ServerFlow *a1, int a2);
-ool Handler_IsSkyDropUser(ServerFlow *a1, int a2);
+bool Handler_IsSkyDropUser(ServerFlow *a1, int a2);
 bool Handler_IsMonInSkyDrop(ServerFlow *a1, int a2);
 unsigned int Handler_GetWeight(ServerFlow *a1, int a2);
 bool Handler_ShouldBattleEnd(ServerFlow *a1);

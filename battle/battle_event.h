@@ -12,10 +12,11 @@ ENUM_DECLARE(BattleEventType)
 ENUM_DECLARE(BattleEventItemType)
 ENUM_DECLARE(BattleEventPriority)
 
+#include "battle/battle_serverflow.h"
+
 typedef bool (*BattleEventSkipCheckHandler)(BattleEventItem *myHandle, ServerFlow *serverFlow, BattleEventItemType factorType, BattleEventType eventType, u16 subID, u8 monID);
 typedef void (*BattleEventHandler)(BattleEventItem *item, ServerFlow *serverFlow, u8 monID, int *work);
 
-#include "battle/battle_serverflow.h"
 
 C_DECL_BEGIN
 
